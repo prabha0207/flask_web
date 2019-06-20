@@ -19,3 +19,25 @@ if __name__ == '__main__':
     app.run()
 
 
+
+
+\\\ Run time url given name
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/<name>')
+def sayhi(name):
+    greeting='hai'+name
+    return greeting
+@app.route('/guvi <name>')
+def say_guvi_hi(name):
+    greeting='hello'+name
+    return greeting
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+
+
+
+
